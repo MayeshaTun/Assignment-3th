@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hockeys Club</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!--font-family Manrope-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!--Tailwind custom color-->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+
+    <style>
+        .font-manrope{
+            font-family: "Manrope", sans-serif;
+        }
+
+    </style>
+</head>
+<body class="font-manrope">
+    <header class="md:container md:mx-auto">
+      <div class="">
+        <nav>
+          <div class="navbar bg-base-100 container mx-auto lg:px-24 px-8">
+            
+            <div class="navbar-start">
+                     
+              <div class="dropdown">
+                <label tabindex="0"role="button"class="btn     btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg"    class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                  </svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm  dropdown-content mt-3 z-[1] p-2 text-base shadow bg-base-100 rounded-box w-52">
+                        
+                  <li><a>Home</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Pages</a></li>
+                  <li><a>Blog</a></li>
+                  <li><a>Contact</a></li>
+
+                </ul>
+              </div>
+              <a class="btn btn-ghost normal-case text-2xl lg:text-3xl ">Hockey<span class="text-[#FF4240]">’</span>s</a>
+                    
+            </div>
+                  
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu text-base menu-horizontal px-1">
+                <li><a class="text-[#FF4240] font-bold">Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Pages</a></li>
+                <li><a>Blog</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+                
+            <div class="navbar-end">
+              <img class="m-6 hidden lg:flex" src="Images/Frame.svg" alt="">
+              <a class="btn btn-error text-white  lg:min-w-32">Get Ticket</a>
+
+            </div>
+               
+          </div>
+              
+        </nav>
+
+      </div>
+
+      <div class="relative container mx-auto lg:px-24 px-8">
+        <div class="carousel w-full">
+          
+          <div id="slide1" class="carousel-item relative w-full">
+            <img src="Images/1.png" class="w-full">
+           
+            <div class="absolute -bottom-[0rem]  left-[23vh] lg:bottom-0 lg:left-10 space-x-4 transform -translate-y-1/2">
+              <a href="#slide4" class="btn btn-circle border-none bg-black"><span class="text-white">❮</span></a> 
+              <a href="#slide2" class="btn btn-circle  border-none bg-black"><span class="text-white">❯</span></a>
+            </div>
+          
+          </div> 
+                
+          <div id="slide2" class="carousel-item relative w-full">
+            <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" class="w-full"/>
+            
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide1" class="btn btn-circle">❮</a> 
+              <a href="#slide3" class="btn btn-circle">❯</a>
+            </div>
+          </div> 
+               
+          <div id="slide3" class="carousel-item relative w-full">
+            <img src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" class="w-full" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide2" class="btn btn-circle">❮</a> 
+              <a href="#slide4" class="btn btn-circle">❯</a>
+            </div>
+          </div> 
+                
+          <div id="slide4" class="carousel-item relative w-full">
+            <img src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" class="w-full" />
+                  
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide3" class="btn btn-circle">❮</a> 
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+          
+          </div>
+        
+        </div>
+            
+        <div class="absolute rounded-lg -bottom-[70vh] w-[65vh] h-[30vh] bg-black -translate-y-40 flex items-end lg:flex lg:w-2/5 lg:h-[20vh] lg:left-[102vh] lg:-bottom-[7rem]">
+        
+          <div class="text-white absolute">
+            <h2 class="absolute text-center bottom-[20vh] -left-7 w-[60vh]  lg:bottom-[15vh] lg:left-0 lg:w-[40vh]">Meet all the heroes from the field</h2>
+            
+            <p class="absolute text-xs font-light bottom-[5vh] left-4 w-[60vh] lg:bottom-[7vh] lg:left-9  lg:w-[70vh]">In North America, professional women's hockey developed much later than in the men's game, and has seen starts and stops.The Canadian Women's Hockey League, founded in 2014</p>
+                    
+          </div>         
+         
+               
+        </div>
+
+      </div>
+       
+    </header>
+  
+    <main class="container mx-auto lg:px-24 px-8">
+    
+      <section>
+
+        <div class="text-center mt-[50vh]  lg:px-[10vh]  lg:mt-[8vh] ">
+
+          <h1 class="font-bold text-xl ">Professional Hockeys Club</h1>
+          <p class="font-normal  ml-[10vh] w-[45vh] lg:w-[50vh]  text-xs lg:ml-[50vh] lg:py-2 ">The National Women's Hockey League (NWHL), the first women's league to pay salaries, was established in the United States in 2015 and expanded into Canada in 2020.</p>
+
+        </div>
+
+        <div class="grid grid-rows-1 gap-y-6 py-9 lg:grid-cols-4  lg:gap-x-5 lg:mx-[20vh]">
+
+         
+          <div class="text-center">
+            
+            <div class="radial-progress text-red-500" style="--value:87;" role="progressbar"><span class="text-black font-bold">87%</span> 
+            
+            </div>
+            
+            <h4 class="font-bold py-2">Prayer Facility</h4>
+            <p class="text-xs w-[40vh] ml-[12vh] lg:w-[30vh] lg:ml-[2vh] ">However, hundreds of prominent women's players,including</p>
+           
+
+          </div>
+             
+          <div class="text-center">
+            <div class="radial-progress text-green-500 " style="--value:95;" role="progressbar"><span class="text-black font-bold">95%</span>
+            </div>
+            
+            <h4 class="font-bold py-2">Experienced Coach</h4>
+            <p class="text-xs w-[40vh] ml-[12vh] lg:w-[30vh] lg:ml-[2vh]">Canadian and American Olympians founded the Professional</p> 
+              
+          </div>
+         
+          <div class="text-center">   
+            <div class="radial-progress text-yellow-500" style="--value:90;" role="progressbar"><span class="text-black font-bold">90%</span>
+            </div>
+            
+            <h4 class="font-bold py-2">Senior Player</h4>
+            <p class="text-xs w-[40vh] ml-[12vh] lg:w-[30vh] lg:ml-[2vh]">Association and opted to boycott existing leagues  
+            </p>
+
+          </div>
+           
+          <div class="text-center">
+            <div class="radial-progress text-blue-500" style="--value:80;" role="progressbar"><span class="text-black font-bold">80%</span>
+            </div>
+           
+            <h4 class="font-bold py-2">Training Ground</h4>
+            <p class="text-xs w-[40vh] ml-[12vh] lg:w-[30vh] lg:ml-[2vh]">pursuit of a unified, financially stable professional league</p>
+
+          </div>
+        </div>   
+        
+      </section> 
+      
+      <section class=" ">
+        <div class="text-center mb-20 lg:my-20">
+          <h1 class="text-xl font-bold mb-5">Program Sections</h1>
+          <p class="text-xs lg:w-[85vh] mx-auto">Professional Women's Hockey League (PWHL),the unified league many players had been working towards The league debuted in January 2024.</p>
+
+        </div>
+
+        
+        <div class="grid gap-y-5 mt-10 lg:grid-cols-2 lg:gap-y-9 lg:ml-10">
+          
+          <div class="">
+           
+            
+            <div class="text-white w-[65vh] h-[45vh] lg:py-28 lg:w-[75vh] lg:h-[40vh] bg-[url(./Images/2.png)] bg-cover rounded-2xl">
+              
+              <h1 class="font-bold text-lg  ml-5 py-8 lg:py-0 lg:mb-6 ">Junior Program</h1>
+              <p class="ml-5 w-[60vh] text-xs">The winner of the Champions Hockey League will face an NHL challenger each year in the Victoria Cup providing a regular.</p>
+              
+              <button class="btn border-none w-36 ml-5 mt-9 bg-red-500 text-white ">Register Now!</button>
+            
+            </div>
+            
+          </div>
+          
+          
+          <div class="">
+           
+           
+            <div class="text-white w-[65vh] h-[45vh] lg:py-28 lg:-ml-10 lg:w-[75vh] lg:h-[40vh] bg-[url(./Images/3.png)] bg-cover bg-center rounded-2xl">
+             
+              <h1 class="font-bold text-lg  ml-5 py-8 lg:py-0 lg:mb-6 ">Teenager Program</h1>
+              <p class="ml-5 w-[60vh] text-xs">Also in 2008, the new Champions Hockey League was created to provide an elite tournament for the best teams in Europe.</p>
+             
+              <button class="btn border-none w-36 ml-5 mt-5 bg-red-500 text-white ">Register Now!</button>
+            
+            </div>
+             
+          </div>
+          
+          <div class="lg:col-span-2">
+          
+            <div class="text-white w-[65vh] h-[45vh] lg:py-[28vh]  lg:w-[154vh] lg:h-[60vh] bg-[url(./Images/4.png)] bg-cover bg-center rounded-2xl lg:mb-8 ">
+              
+              <h1 class="font-bold text-lg ml-5 py-8 lg:py-0 lg:mb-7 lmt-20">Professional Program</h1>
+              <p class="ml-5 w-[55vh] text-xs" >contest between NHL and European teams since the end of the Super Series in 1991. The Champions League was suspended for the 2009-10 season due to withdrawal of sponsors such as Gazprom.</p>
+
+              <button class=" btn border-none w-36 ml-5 mt-5 bg-red-500 text-white ">Register Now!</button>
+               
+            </div>
+          
+          </div>
+
+        </div>
+
+      </section>
+
+      <section>
+         
+        <div class="text-center mt-10 lg:mb-20 lg:my-20">
+          <h1 class="text-xl font-bold mb-5">Our New Products</h1>
+          <p class="text-xs lg:w-[60vh] mx-auto">KHL and Gazprom executive Alexander Medvedev proposed merging the KHL into a new pan-European league called United Hockey Europe..</p>
+        </div>
+       
+        <div class="gap-6 mt-12 grid lg:grid-cols-2 lg:gap-5 ">
+            
+            
+          <div class="card card-side  bg-base-100 shadow-xl flex flex-col lg:flex-row">
+            
+            <img class="px-[4vh] py-[4vh]" src="Images/5.png" alt=""/>
+            <div class="card-body">
+              <div>
+                <div class="rating gap-x-2">
+                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"/>
+                 <h1>5.0</h1>
+                  <img src="Images/Frame1.png" alt="">
+                  <h1>20</h1> 
+                  <img src="Images/Frame.png" alt="">
+                  <h1>200</h1>
+                </div>
+              
+              </div>
+          
+              <h2 class="card-title text-xl font-bold mb-2">World Cup Flags Football</h2>
+              <p class="text-xs lg:w-[30vh]">In 2008, the former Russian Super League was refounded as.</p>
+              
+              <div class="card-actions gap-x-4">
+
+                <h4 class=""><span class="text-red-500 font-bold">Price - $22.00</span>
+                </h4>
+                
+                <img class="" src="/Images/Frame (1).svg" alt="">
+                <p class="text-sm">Delivery Fee : Free</p>
+                
+                
+                        
+              </div>
+            </div>
+          </div> 
+          
+          <div class="card card-side bg-base-100 shadow-xl flex flex-col lg:flex-row">
+            <img class="px-[4vh] py-[4vh]" src="Images/6.png" alt=""/>
+            <div class="card-body">
+              <div>
+                <div class="rating gap-x-2">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"/>
+                  <h1>5.0</h1>
+                  <img src="Images/Frame1.png" alt="">
+                  <h1>20</h1> 
+                  <img src="Images/Frame.png" alt="">
+                  <h1>200</h1>
+                
+                </div>
+              
+              </div>
+
+              <h2 class="card-title text-xl font-bold mb-2">World Cup Flags Football</h2>
+              <p class="text-xs lg:w-[30vh]">expanded into Belarus, Latvia, and Kazakhstan.</p>
+              <div class="card-actions gap-x-4">
+                
+                <h4><span class="text-red-500 font-bold">Price - $22.00</span></h4>  
+                <img class="" src="/Images/Frame (1).svg" alt="">
+                <p class="text-sm">Delivery Fee : Free</p>
+                        
+              </div>
+            </div>
+          </div> 
+          
+          <div class="card card-side bg-base-100 shadow-xl flex flex-col lg:flex-row">
+            <img class="px-[4vh] py-[4vh]" src="Images/7.png" alt=""/>
+            <div class="card-body">
+              <div>
+                <div class="rating gap-x-2">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"/>
+                  <h1>5.0</h1>
+                  <img src="Images/Frame1.png" alt="">
+                  <h1>20</h1> 
+                  <img src="Images/Frame.png" alt="">
+                  <h1>200</h1>
+                
+                </div>
+              
+              </div>
+
+              <h2 class="card-title text-xl font-bold mb-2">World Cup Flags Football</h2>
+              <p class="text-xs lg:w-[30vh]"> and encouraged its clubs to aggressively seek talented.</p>
+              <div class="card-actions gap-x-4">
+                
+                <h4><span class="text-red-500 font-bold">Price - $22.00</span></h4>  
+                <img class="" src="/Images/Frame (1).svg" alt="">
+                <p class="text-sm">Delivery Fee : Free</p>
+                        
+              </div>
+            </div>
+          </div> 
+          
+          <div class="card card-side bg-base-100 shadow-xl flex flex-col lg:flex-row">
+            <img class="px-[4vh] py-[4vh]" src="Images/8.png" alt=""/>
+            <div class="card-body">
+              <div>
+                <div class="rating gap-x-2">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"/>
+                  <h1>5.0</h1>
+                  <img src="Images/Frame1.png" alt="">
+                  <h1>20</h1> 
+                  <img src="Images/Frame.png" alt="">
+                  <h1>200</h1>
+                
+                </div>
+              
+              </div>
+
+              <h2 class="card-title text-xl font-bold mb-2">World Cup Flags Football</h2>
+              <p class="text-xs lg:w-[30vh]">players (sometimes at the expense of the NHL), prompting.</p>
+              <div class="card-actions gap-x-4">
+                
+                <h4><span class="text-red-500 font-bold">Price - $22.00</span></h4>  
+                <img class="" src="/Images/Frame (1).svg" alt="">
+                <p class="text-sm">Delivery Fee : Free</p>
+                        
+              </div>
+            </div>
+          </div>   
+          
+          <div class="card card-side bg-base-100 shadow-xl flex flex-col lg:flex-row">
+            
+            <img class="px-[4vh] py-[4vh]" src="Images/9.png" alt=""/>
+            <div class="card-body">
+              <div>
+                <div class="rating gap-x-2">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"/>
+                  <h1>5.0</h1>
+                  <img src="Images/Frame1.png" alt="">
+                  <h1>20</h1> 
+                  <img src="Images/Frame.png" alt="">
+                  <h1>200</h1>
+                
+                </div>
+              
+              </div>
+
+              <h2 class="card-title text-xl font-bold mb-2">World Cup Flags Football</h2>
+              <p class="text-xs lg:w-[30vh]">The media to speculate about eventual KHL challenge to the.</p>
+              <div class="card-actions gap-x-4">
+                
+                <h4><span class="text-red-500 font-bold">Price - $22.00</span></h4>  
+                <img class="" src="/Images/Frame (1).svg" alt="">
+                <p class="text-sm">Delivery Fee : Free</p>
+                        
+              </div>
+            </div>
+          </div>
+          
+          <div class="card card-side bg-base-100 shadow-xl flex flex-col lg:flex-row">
+            <img class="px-[4vh] py-[4vh]" src="Images/10.png" alt=""/>
+            <div class="card-body">
+              <div>
+                <div class="rating gap-x-2">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"/>
+                  <h1>5.0</h1>
+                  <img src="Images/Frame1.png" alt="">
+                  <h1>20</h1> 
+                  <img src="Images/Frame.png" alt="">
+                  <h1>200</h1>
+                
+                </div>
+              
+              </div>
+
+              <h2 class="card-title text-xl font-bold mb-2">World Cup Flags Football</h2>
+              <p class="text-xs lg:w-[30vh]">NHL dominance of international hockey the Kontinental Hockey League.</p>
+              <div class="card-actions gap-x-4">
+                
+                <h4><span class="text-red-500 font-bold">Price - $22.00</span></h4>  
+                <img class="" src="/Images/Frame (1).svg" alt="">
+                <p class="text-sm">Delivery Fee : Free</p>
+                        
+              </div>
+            </div>
+          </div> 
+          
+        </div>
+      
+      </section>
+      
+      <section>
+        <div class="text-center mt-10 lg:mb-20 lg:my-20">
+          <h1 class="text-xl font-bold mb-5">Clients Question</h1>
+          <p class="text-xs lg:w-[60vh] mx-auto">Teams from North American and Europe do not regularly compete against each other in "friendlies" as do soccer clubs. </p>
+
+        </div>
+    
+        <div class="grid grid-rows-1 lg:flex lg:flex-rows-reverse gap-32">
+          
+          
+          <img class="  w-[68vh] h-[50vh] ml-2 mt-10 lg:mt-0 lg:w-[90vh] lg:h-[70vh] lg:ml-[5vh]" src="Images/11.png" alt="">  
+          
+          <div class="top-36"> 
+            <div class="collapse collapse-plus bg-base-200  h-[18vh] w-[70vh] lg:w-[80vh] lg:h-[12vh]">
+            <input type="radio" name="my-accordion-3" checked="checked" /> 
+            <div class="collapse-title text-lg font-bold">
+              Our Equipment
+            </div>
+            <div class="collapse-content"> 
+              <p>Wow nice</p>
+            </div>
+            </div>
+         
+            <div class="collapse collapse-plus bg-base-200 h-[18vh] w-[70vh] lg:w-[80vh] lg:h-[12vh]">
+            <input type="radio" name="my-accordion-3" /> 
+            <div class="collapse-title text-lg font-bold">
+              Hockey Training
+            </div>
+            <div class="collapse-content"> 
+              <p>hello</p>
+            </div>
+            </div>
+         
+            <div class="collapse collapse-plus bg-base-200 h-[18vh] w-[70vh] lg:w-[80vh] lg:h-[12vh]">
+            <input type="radio" name="my-accordion-3" /> 
+            <div class="collapse-title text-lg font-bold">
+              Private Lessons
+            </div>
+            <div class="collapse-content"> 
+              <p>ok</p>
+            </div>
+            </div>
+            
+            <div class="collapse collapse-plus bg-base-200 h-[18vh] w-[70vh] lg:w-[80vh] lg:h-[12vh]">
+              <input type="radio" name="my-accordion-3" /> 
+              <div class="collapse-title text-lg font-bold">
+                Ski Touring
+              </div>
+              <div class="collapse-content"> 
+                <p>hello</p>
+              </div>
+            </div>
+            
+            <div class="collapse collapse-plus bg-base-200 h-[18vh] w-[70vh] lg:w-[80vh] lg:h-[12vh]">
+              <input type="radio" name="my-accordion-3" /> 
+              <div class="collapse-title text-lg font-bold">
+                Booking
+              </div>
+              <div class="collapse-content"> 
+                <p>please details</p>
+              </div>
+            </div>
+
+            <div class="collapse collapse-plus bg-base-200 h-[18vh] w-[70vh] lg:w-[80vh] lg:h-[12vh]">
+              <input type="radio" name="my-accordion-3" /> 
+              <div class="collapse-title text-lg font-bold">
+                Pricings
+              </div>
+              <div class="collapse-content"> 
+                <p>hello</p>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+
+      </section> 
+
+
+      <section>
+  
+        <div class="text-center mt-10 lg:mb-20 lg:my-20">
+          <h1 class="text-xl font-bold mb-5">Get In Touch</h1>
+          <p class="text-xs lg:w-[60vh] mx-auto">Although efforts to expand intercontinental play have increased since the new 2000 millennium.</p>
+
+        </div>
+       
+        <div class="gap-6 mt-12 grid lg:grid-cols-2 lg:gap-5 ">
+          
+          <div class="card w-[66vh] ml-[1vh] lg:w-[60vh] h-[30] bg-base-100 shadow-xl lg:ml-[10vh]  ">
+ 
+            <div class="card-body items-center text-center ml-[6vh] w-[55vh] lg:ml-[5vh] lg:w-[50vh] h-[25vh] mx-10 my-4  bg-lime-50 ">
+              <img class="w-14 -ml-[29vh]" src="Images/Group 1171275317.png" alt="">
+              <input type="text" placeholder="Phone Number : (+62) 123-321-543" class="input input-bordered border-none bg-lime-50 w-full max-w-xs text-xs"/>
+            </div>
+            
+            <div class="card-body items-center text-center ml-[6vh] w-[55vh] lg:ml-[5vh] lg:w-[50vh] h-[25vh] mx-10  bg-amber-50">
+              <img class="w-14 -ml-[29vh]" src="Images/Group 1171275318.png" alt="">
+              <input type="text" placeholder="Email : hockeys@support.com" class="input input-bordered border-none bg-amber-50 w-full max-w-xs text-xs"/>
+            </div>
+
+            <div class="card-body items-center text-center ml-[6vh] w-[55vh] lg:ml-[5vh] lg:w-[50vh] h-[25vh] mx-8 my-4  bg-cyan-50">
+              <img class="w-14 -ml-[29vh]" src="Images/Group 1171275321.png" alt="">
+              <input type="text" placeholder="Location:152/1 Mohakhali Wireless Gate"class="input input-bordered border-none bg-cyan-50 w-full max-w-xs text-xs"/>
+           
+            </div>
+            
+
+          </div>
+   
+          <div class=" flex flex-wrap justify-between">
+            
+            <label class="form-control w-full max-w-xs ml-[4vh] lg:ml-0 ">
+              <div class="label">
+                <span class="label-text font-bold">Your Name</span>
+              </div>
+              <input type="text" placeholder="Enter your full name" class="input input-bordered border-none lg:w-full  max-w-xs text-xs bg-stone-100  "/>
+              
+            </label>
+            
+            <label class="form-control w-full max-w-xs ml-[4vh] lg:ml-0">
+              <div class="label">
+                <span class="label-text font-bold">Your Email</span>
+              </div>
+              <input type="text" placeholder="Enter your email" class="input input-bordered border-none text-xs  w-full max-w-xs bg-stone-100 "/>
+              
+            </label>
+            
+            <label class="form-control w-full max-w-xs ml-[4vh] lg:ml-0">
+              <div class="label">
+                <span class="label-text font-bold">Subject</span>
+              </div>
+              <input type="text" placeholder="Enter your subject" class="input input-bordered border-none text-xs w-full max-w-xs bg-stone-100"/>
+              
+            </label>
+
+            <label class="form-control w-full max-w-xs ml-[4vh] lg:ml-0">
+              <div class="label">
+                <span class="label-text font-bold">Phone Number</span>
+              </div>
+              <input type="text" placeholder="Enter your phone number" class="input input-bordered border-none text-xs w-full max-w-xs bg-stone-100"/>
+              
+            </label>
+             
+            <label class="form-control w-full max-w-xs ml-[4vh] lg:ml-0">
+              <div class="label">
+                <span class="label-text font-bold">Message</span>
+                
+              </div>
+              <input  type="text" placeholder="Write your message" class="input input-bordered border-none text-xs w-[60vh]  lg:w-[85vh] h-[50vh] bg-stone-100 pb-[40vh]"/>
+              
+            </label>
+            <br>
+            <div>
+              <button class="btn btn-wide text-xs w-[60vh] lg:w-[85vh] mt-[5vh] ml-[4vh] lg:ml-[1vh] bg-red-500 text-white">Send Message</button>
+            </div> 
+            
+          </div>
+          
+        </div>
+        
+        <div class="shadow-xl shadow-white mt-[10vh] text-center w-[44vh] lg:w-[160vh] bg-neutral-50 ml-[9vh]">
+          <h2 class="font-bold ml-[2vh]">Social Media</h2>
+           <img class="ml-[6vh] lg:ml-[70vh] mt-[4vh]" src="Images/Social.svg" alt="">
+
+        </div>
+
+
+      </section>
+
+    </main>
+   
+
+    <footer class="container mx-auto lg:px-24 px-8 footer p-10 bg-[#131318] text-neutral-content mt-14">
+      
+      <div class="text-center ml-20 lg:ml-0 ">
+        
+        <h1 class="font-bold ml-10 lg:ml-0 text-white text-lg ">Get In Touch</h1>
+        <p class="text-xs w-50 -ml-9 lg:w-[26vh] lg:-ml-[3vh]">The opportunities for fans and media to compare levels of play between the continents.</p>
+        
+        <div class="flex gap-3 mt-5">
+          <img class=" " src="Images/Frame2.png" alt="">
+          <h6 class="text-xs">hockeys@support.com</h6>
+        </div>
+        
+        <div class="flex gap-3 ml-4 lg:ml-0">
+          <img src="Images/Frame (3).png" alt="">
+          <h6 class="text-ms">(+62) 123-321-543</h6>
+        </div> 
+      
+          
+      </div>
+      
+      <div class="grid grid-cols-2 gap-20 ml-[10vh]  lg:flex flex-row lg:gap-[30vh]">
+      
+       <div class=" grid">
+        <h6 class="font-bold text-base text-white mb-5">Company</h6> 
+        <a class="link link-hover">About us</a> 
+        <br>
+        <a class="link link-hover">Leadership</a> 
+        <br>
+        <a class="link link-hover">Careers</a> 
+        <br>
+        <a class="link link-hover">Legal Notice</a>
+      </div>
+      
+      <div class="grid">
+        <h6 class="font-bold text-base text-white mb-5">Support</h6> 
+        <a class="link link-hover">Help Center</a>
+        <br>
+        <a class="link link-hover">FAQ</a>
+        <br>
+        <a class="link link-hover">Ticket Support</a> 
+        <br>
+        <a class="link link-hover">Contact Us</a>
+      </div>
+      
+      <div class="grid  ml-[20vh] w-[20vh]">
+        
+        <h6 class="font-bold text-base text-white mb-5">Services</h6> 
+        <a class="link link-hover">Academy</a> 
+        <br>
+        <a class="link link-hover">Group Lesson</a> 
+        <br>
+        <a class="link link-hover">Private Lesson</a> 
+        <br>
+        <a class="link link-hover">Hockeys for kids</a> <br>
+        <a class="link link-hover">Hockeys for Adult</a> 
+      </div>
+     </div>
+    </footer>
+
+
+
+
+  
+    
+  </body>
+</html>
